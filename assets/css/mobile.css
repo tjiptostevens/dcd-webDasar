@@ -1,0 +1,37 @@
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        display: none;
+        position: absolute;
+        top: 87px;
+        right: 0px;
+        padding: 15px 0;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    #item-1 {
+        background: url(../img/hero.jpg) no-repeat 40% 80% / 2000px;
+    }
+    .title {
+        padding: 25px;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        max-width: 85vw;
+    }
+    .nav-button {
+        padding: 25px;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        background: rgba(0, 0, 0, 0.2);
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-button:hover {
+        background: rgba(0, 0, 0, 1);
+    }
+    .nav-button:active {
+        background: rgba(0, 0, 0, 0.5);
+    }
+}

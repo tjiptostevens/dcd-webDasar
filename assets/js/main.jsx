@@ -28,3 +28,30 @@ const handleBlog = (e) => {
   let sld = document.getElementById('slider')
   sld.className = 'none'
 }
+
+const formData = () => {
+  let nameInput = document.getElementById('name')
+  let companyInput = document.getElementById('company')
+  let emailInput = document.getElementById('email')
+  let phoneInput = document.getElementById('phone')
+  let messageInput = document.getElementById('message')
+  alert(
+    'Thank you ' +
+      nameInput.value +
+      'for contacting us.\n' +
+      '\nMessage Detail :\n ' +
+      '\n Company : ' +
+      companyInput.value +
+      '\n E-Mail : ' +
+      emailInput.value +
+      '\n Phone : ' +
+      phoneInput.value +
+      '\n Message : ' +
+      messageInput.value,
+  )
+  nameInput.value = ''
+  companyInput.value = ''
+  emailInput.value = ''
+  phoneInput.value = ''
+  messageInput.value = ''
+}

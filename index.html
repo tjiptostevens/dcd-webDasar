@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TJIPTO STEVEN SENJAYA</title>
+    <link rel="stylesheet" href="./assets/css/scrollbar.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/header.css" />
     <link rel="stylesheet" href="./assets/css/slider.css" />
+    <link rel="stylesheet" href="./assets/css/mobile.css" />
     <script src="./assets/js/main.jsx"></script>
 </head>
 
@@ -16,6 +18,7 @@
     <header style="position: absolute">
         <nav id="nav">
             <div class="title"><a href="./index.html">TJIP.work</a></div>
+            <div class="nav-button" onclick="handleNav()">MENU</div>
 
             <div class="nav-container">
                 <a href="#item-1" class="nav-link" onclick="handleNavClick(this)">HOME</a
@@ -73,20 +76,19 @@
             display: flex;
             background: rgba(255, 255, 255, 0.5);
             border-radius: 10px;
-            align-self: start;
-            margin-top: 85px;
-            margin-left: -350px;
+            margin: 85px 0 auto 50px;
             padding: 15px 2px;
             width: 66vw;
             max-height: 80vh;
           ">
-                    <div style="
+                    <div class="blog-title" style="
               position: absolute;
               right: 92px;
               bottom: 41px;
               font-size: 100px;
               font-weight: 900;
               color: white;
+              opacity: 0.5;
             ">
                         BLOG
                     </div>
@@ -179,9 +181,12 @@
             alt="profile picture"
             style="border-radius: 25px; height: 100px"
           />
-          <div>
+          <div
+            class="card-contact"
+            style="line-height: 0; padding: 15px; text-align: center"
+          >
             <p>TJIPTO STEVEN SENJAYA</p>
-            <p>+6287832340390</p>
+            <small>+6287832340390</small>
           </div>
         </div>
       </aside>
@@ -202,37 +207,20 @@
         return w, h;
       });
 
+      // Submit Form
       let form = document.getElementById("contact-form");
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         formData();
       });
-      const formData = () => {
-        let nameInput = document.getElementById("name");
-        let companyInput = document.getElementById("company");
-        let emailInput = document.getElementById("email");
-        let phoneInput = document.getElementById("phone");
-        let messageInput = document.getElementById("message");
-        alert(
-          "Thank you " +
-            nameInput.value +
-            "for contacting us.\n" +
-            "\nMessage Detail :\n " +
-            "\n Company : " +
-            companyInput.value +
-            "\n E-Mail : " +
-            emailInput.value +
-            "\n Phone : " +
-            phoneInput.value +
-            "\n Message : " +
-            messageInput.value
-        );
-        nameInput.value = "";
-        companyInput.value = "";
-        emailInput.value = "";
-        phoneInput.value = "";
-        messageInput.value = "";
+
+      const handleNav = (e) => {
+        let elm = document.getElementsByClassName("nav-container");
+        elm[0].style.display = "flex";
+        setTimeout(() => {
+          elm[0].style.display = "none";
+        }, 3000);
       };
     </script>
   </body>
