@@ -42,12 +42,12 @@
     <main id="slider" class="slider">
       <div id="item-1" class="slider-item">
         <div class="hero">
-          <p style="letter-spacing: 5px">
+          <p style="letter-spacing: 5px; text-align: right">
             We are
-            <b style="font-size: 54px; position: relative; top: 10px">FOCUS</b>
+            <b style="font-size: 48px; position: relative; top: 10px">FOCUS</b>
             on
           </p>
-          <p><i>DEVELOPING</i> good <b>IDEAS</b></p>
+          <p style="text-align: center"><i>DEVELOPING</i> good <b>IDEAS</b></p>
           <p>for a <b style="font-size: 44px">BETTER FUTURE</b>.</p>
           <p style="font-size: 15px; text-align: right">
             TJIPTO STEVEN SENJAYA
@@ -72,26 +72,8 @@
                 </div>
             </div>
             <div id="item-4" class="slider-item">
-                <div class="blog-container" style="
-            display: flex;
-            background: rgba(255, 255, 255, 0.5);
-            border-radius: 10px;
-            margin: 85px 0 auto 50px;
-            padding: 15px 2px;
-            width: 66vw;
-            max-height: 80vh;
-          ">
-                    <div class="blog-title" style="
-              position: absolute;
-              right: 92px;
-              bottom: 41px;
-              font-size: 100px;
-              font-weight: 900;
-              color: white;
-              opacity: 0.5;
-            ">
-                        BLOG
-                    </div>
+                <div class="blog-container">
+                    <div class="blog-title">BLOG</div>
                     <div style="overflow-y: auto; padding: 10px 21px">
                         <article>
                             <h2>Microsoft Edge</h2>
@@ -142,17 +124,20 @@
             </div>
             <div id="item-5" class="slider-item">
                 <form id="contact-form" class="contact-form">
-                    <label>NAME</label>
+                    <h2>CONTACT ME</h2>
+                    <label>NAME <b style="color: red">*</b></label>
                     <input class="form-input" type="text" id="name" name="name" required />
                     <label>COMPANY</label>
                     <input class="form-input" type="text" id="company" name="company" />
-                    <label>E-MAIL</label>
+                    <label>E-MAIL <b style="color: red">*</b></label>
                     <input class="form-input" type="email" id="email" name="email" required />
-                    <label>PHONE</label>
+                    <label>PHONE <b style="color: red">*</b></label>
                     <input class="form-input" type="tel" id="phone" name="phone" required />
-                    <label>MESSAGE</label>
+                    <label>MESSAGE <b style="color: red">*</b></label>
                     <textarea class="form-input" id="message" name="message" cols="30" rows="10"></textarea>
+
                     <button class="form-button" type="submit">SEND</button>
+                    <span style="color: red; margin: 15px 0"><b>*</b> required</span>
                 </form>
 
                 <div class="attribution">
@@ -160,18 +145,7 @@
           >
         </div>
       </div>
-      <aside
-        class="aside"
-        style="
-          position: fixed;
-          top: 85px;
-          right: 30px;
-          background: rgba(255, 255, 255, 0.5);
-          border-radius: 10px;
-          padding: 25px;
-          min-width: 20vw;
-        "
-      >
+      <aside class="aside">
         <div
           class="card"
           style="display: flex; flex-direction: column; align-items: center"
@@ -191,14 +165,20 @@
         </div>
       </aside>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">Copyright &copy; 2022</footer>
     <script>
       const getPage = () => {
         console.log(window.location.hash);
         let hash = window.location.hash;
         return hash;
       };
-
+      let scrolling = 0;
+      document.addEventListener("wheel", function (e) {
+        let slide = document.getElementsByClassName("slider");
+        slide[0].style.flexDirection = "column";
+        slide[0].style.overflowY = "auto";
+        slide[0].style.scrollSnapType = "y proximity";
+      });
       window.addEventListener("resize", function (e) {
         // do stuff here
         h = innerHeight;

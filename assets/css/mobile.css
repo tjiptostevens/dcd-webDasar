@@ -7,8 +7,17 @@
         padding: 15px 0;
         background: rgba(0, 0, 0, 0.2);
     }
+    .hero {
+        padding: 30px 50px;
+        border-radius: 10px 0 0 10px;
+        font-size: 30px;
+        line-height: 0.8;
+        left: 10%;
+        right: 0;
+        top: 45%;
+    }
     #item-1 {
-        background: url(../img/hero.jpg) no-repeat 40% 80% / 2000px;
+        background: url(../img/hero.jpg) no-repeat 35% 100% / 2000px;
     }
     .title {
         padding: 25px;
@@ -33,5 +42,34 @@
     }
     .nav-button:active {
         background: rgba(0, 0, 0, 0.5);
+    }
+    .slider {
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .aside {
+        position: initial;
+        min-height: 300px;
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+    }
+    .blog-title {
+        right: -45px;
+        bottom: 103px;
+        font-size: 70px;
+        font-weight: 900;
+        color: white;
+        opacity: 0.5;
+        transform: rotate(270deg);
+    }
+    .blog-container {
+        margin: 85px 0 auto 25px;
+    }
+    .footer {
+        text-align: center;
+        padding: 5px 0;
+        min-width: 100vw;
     }
 }
