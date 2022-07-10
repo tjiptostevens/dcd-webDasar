@@ -6,6 +6,7 @@
         right: 0px;
         padding: 15px 0;
         background: rgba(0, 0, 0, 0.2);
+        width: 100%;
     }
     .hero {
         padding: 30px 50px;
@@ -55,17 +56,20 @@
         justify-content: space-around;
         display: flex;
     }
-    .blog-title {
-        right: -45px;
-        bottom: 103px;
+    .left-container {
+        margin: 85px 0 auto 25px;
+    }
+    .about-title {
+        right: -66px;
+        bottom: 141px;
         font-size: 70px;
-        font-weight: 900;
-        color: white;
-        opacity: 0.5;
         transform: rotate(270deg);
     }
-    .blog-container {
-        margin: 85px 0 auto 25px;
+    .exp-title {
+        right: -11px;
+        bottom: 80px;
+        font-size: 70px;
+        transform: rotate(270deg);
     }
     .footer {
         text-align: center;

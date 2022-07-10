@@ -37,15 +37,12 @@
         background: url("../img/hero.jpg") no-repeat center 70% / cover;
     }
     #item-2 {
-        background: #ff7070;
-    }
-    #item-3 {
         background: #ffb562;
     }
-    #item-4 {
+    #item-3 {
         background: #3ab0ff;
     }
-    #item-5 {
+    #item-4 {
         background: url("https://images.pexels.com/photos/33999/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") no-repeat center 20% / cover;
     }
 }
