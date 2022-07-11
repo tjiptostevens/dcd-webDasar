@@ -1,7 +1,5 @@
 // change nav item to bold when click
 const handleNavClick = (e) => {
-  // make slider appear
-  let sld = document.getElementById('slider')
   const navElement = () => {
     // get element & children
     let elm = document.getElementsByClassName('nav-container')
@@ -15,18 +13,16 @@ const handleNavClick = (e) => {
     // change to active
     e.className = 'nav-link-active'
   }
-  if (sld.className === 'none') {
-    navElement()
-    sld.className = 'slider'
-  } else {
-    navElement()
-  }
+
+  navElement()
 }
-const handleBlog = (e) => {
-  handleNavClick(e)
-  // get element & children
-  let sld = document.getElementById('slider')
-  sld.className = 'none'
+const handleNavMobile = () => {
+  // Open Nav Menu when Clicked
+  let elm = document.getElementsByClassName('nav-container')
+  elm[0].style.display = 'flex'
+  setTimeout(() => {
+    elm[0].style.display = 'none'
+  }, 3000)
 }
 
 const formData = () => {

@@ -1,0 +1,10 @@
+untuk slider saya mengunakan CSS dengan mengklik tombol navigasi dan saya menggunakan beberapa javascript di dalam tugas ini.
+
+2 java script di dalam file index.html:
+- wheel event listener. untuk mengubah halaman dari horisontal ke vertikal.
+- submit event listener. menampilkan pop-up untuk menaruh isi dari form kontak.
+
+3 java script di dalam file ./assets/js/main.jsx:
+- handleNavClick. di gunakan untuk mengubah text nav jika diklik menjadi bold, serta mengubah lain nya menjadi normal.
+- handleNavMobile. di gunakan untuk menampilkan menu jika di klik. dan menu hilang setelah 3 detik 
+- formData. di gunakan untuk menangkap isi dari form dan menampilkan dalam pop-up.
