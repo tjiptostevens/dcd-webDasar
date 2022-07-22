@@ -102,6 +102,9 @@ main {
         border-radius: 4px;
         margin-bottom: 15px;
     }
+    .form-check {
+        margin-bottom: 50px;
+    }
     .form-button {
         width: 100%;
         padding: 6px 12px;
